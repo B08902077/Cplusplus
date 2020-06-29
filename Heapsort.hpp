@@ -1,7 +1,7 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-int command;
+int command;	// increasing if larger than zero, decreasing otherwise
 
 template <typename E>
 bool Less(E &x, E &y){
