@@ -1,13 +1,16 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
+#ifndef command_define
 int command;	// increasing if positive, decreasing otherwise
 
 template <typename E>
-bool Less(E &x, E &y){
+inline bool Less(E &x, E &y){
 	if(command > 0)	return x < y;
 	else	return x > y;
 }
+#define command_define
+#endif
 
 template <typename E>
 void Merge(vector<E> &in, vector<E> &out, int p, int base){

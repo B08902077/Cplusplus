@@ -1,13 +1,16 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-int command;	// increasing if larger than zero, decreasing otherwise
+#ifndef command_define
+int command;
 
 template <typename E>
 bool Less(E &x, E &y){
 	if(command > 0)	return x < y;
 	else	return x > y;
 }
+#define command_define
+#endif
 
 template <typename E>
 void balance(vector<E> &v, int p, int Size){
